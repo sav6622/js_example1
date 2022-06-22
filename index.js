@@ -4,8 +4,8 @@ let bonusBalance = 1000;
 console.log(`Пользователь: ${username}`);
 console.log(`Баланс: ${bonusBalance}`);
 
-const bonusBuysNew = 50;
-const bonusDropsEveryDay = 3;
+const bonusBuysNew = 50;      //Количество бонусов за покупку
+const bonusDropsEveryDay = 3; //Количество бонусов списывается каждый день
 
 const days = 7;               //Количество дней для расчета баланса
 const daysBetweenBuys = 2;    //Каждые n дней покупка
