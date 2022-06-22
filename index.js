@@ -1,9 +1,9 @@
 let username = "my name";
 let bonusBalance = 1000;
 
-const COLOR_USERNAME = "\x1b[31m"
-const COLOR_BALANCE = "\x1b[32m"
-const COLOR_DEFAULT = "\x1b[0m"
+const COLOR_USERNAME = "\x1b[31m";
+const COLOR_BALANCE = "\x1b[32m";
+const COLOR_DEFAULT = "\x1b[0m";
 
 console.log(`Пользователь: ${COLOR_USERNAME}${username}${COLOR_DEFAULT}`);
 console.log(`Баланс: ${COLOR_BALANCE}${bonusBalance}${COLOR_DEFAULT}`);
