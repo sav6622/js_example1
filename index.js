@@ -1,8 +1,12 @@
 let username = "my name";
 let bonusBalance = 1000;
 
-console.log(`Пользователь: ${username}`);
-console.log(`Баланс: ${bonusBalance}`);
+const COLOR_USERNAME = "\x1b[31m"
+const COLOR_BALANCE = "\x1b[32m"
+const COLOR_DEFAULT = "\x1b[0m"
+
+console.log(`Пользователь: ${COLOR_USERNAME}${username}${COLOR_DEFAULT}`);
+console.log(`Баланс: ${COLOR_BALANCE}${bonusBalance}${COLOR_DEFAULT}`);
 
 const bonusBuysNew = 50;      //Количество бонусов за покупку
 const bonusDropsEveryDay = 3; //Количество бонусов списывается каждый день
@@ -21,5 +25,5 @@ for (let i = 0; i < days; i++)  {
     bonusBalance = 0;    //Обнуляем баланс бонусов если их меньше каждодневного списания
 }
 
-console.log(`Баланс на ${days} день: ${bonusBalance}`);
+console.log(`Баланс на ${days} день: ${COLOR_BALANCE}${bonusBalance}${COLOR_DEFAULT}`);
 
