@@ -12,9 +12,13 @@ const daysBetweenBuys = 2;    //Каждые n дней покупка
   
 for (let i = 0; i < days; i++)  {
   if (i % daysBetweenBuys) 
-    bonusBalance += bonusBuysNew;      //Бонусы за покупку
-  
-  bonusBalance -= bonusDropsEveryDay;  //Списание
+    bonusBalance += bonusBuysNew;      //Начисляем бонусы за покупку
+
+  //Проведём ежедневное списание бонусов
+  if (bonusBalance >= bonusDropsEveryDay)
+    bonusBalance -= bonusDropsEveryDay;  
+  else
+    bonusBalance = 0;    //Обнуляем баланс бонусов если их меньше каждодневного списания
 }
 
 console.log(`Баланс на ${days} день: ${bonusBalance}`);
